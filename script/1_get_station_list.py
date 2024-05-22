@@ -4,7 +4,7 @@ import requests
 import time
 
 key = ''
-with open("./key/key") as f:
+with open("../data/key/key") as f:
           key = f.read()
         
 url = 'https://api.ekispert.jp/v1/json/station'
@@ -47,6 +47,6 @@ while True:
 	params['offset'] = params['offset'] + params['limit']
 	time.sleep(1)
 
-with open('station_master.tsv', 'w') as f:
+with open('../data/master/station_master.tsv', 'w') as f:
 	f.write('\n'.join(alldata))
 
